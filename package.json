@@ -1,0 +1,57 @@
+{
+  "name": "scraper",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "s": "nodemon main.js",
+    "start": "electron main.js",
+    "build": "electron-builder"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.4.0",
+    "cheerio": "^1.0.0-rc.12",
+    "crypto": "^1.0.1",
+    "express": "^4.18.2",
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "depcheck": "^1.4.3",
+    "electron": "^25.4.0",
+    "electron-builder": "^22.14.0",
+    "nodemon": "^3.0.1"
+  },
+  "build": {
+    "appId": "com.nodessc.app",
+    "productName": "NodeSSc",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "node_modules/**/*",
+      "main.js",
+      "preload.js",
+      "index.html",
+      "renderer.js"
+    ],
+    "mac": {
+      "category": "your.app.category",
+      "icon": "build/icon.icns"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "build/icon.ico"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rmguney/NodeSSc.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rmguney/NodeSSc/issues"
+  },
+  "homepage": "https://github.com/rmguney/NodeSSc#readme",
+  "description": ""
+}
